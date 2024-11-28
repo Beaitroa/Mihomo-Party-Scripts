@@ -20,11 +20,11 @@ function overwriteRules(params) {
     //"DOMAIN-SUFFIX,gstatic.com,自定义代理组1",
     // 示例3 ：使用 自定义代理组2
     //"DOMAIN-SUFFIX,googleapis.com,自定义代理组2",
-	  "RULE-SET,reject_rules,广告拦截",
-    "RULE-SET,proxy_rules,GLOBAL",
+    "RULE-SET,reject_rules,广告拦截",
     "RULE-SET,direct_rules,DIRECT",    
+    "RULE-SET,proxy_rules,GLOBAL",      
     "RULE-SET,BiliBili,哔哩哔哩",
-	  "RULE-SET,YouTube,YouTube",
+    "RULE-SET,YouTube,YouTube",
   ];
 
 
@@ -37,7 +37,7 @@ function overwriteRules(params) {
     "RULE-SET,applications,DIRECT",
     "RULE-SET,openai,ChatGPT",
     "RULE-SET,spotify,Spotify",
-	  "RULE-SET,google_domain,Google",   
+    "RULE-SET,google_domain,Google",   
     "RULE-SET,telegram_domain,Telegram",    
     "RULE-SET,Microsoft,Microsoft",
     "RULE-SET,twitter_domain,Twitter",    
@@ -49,34 +49,34 @@ function overwriteRules(params) {
     "RULE-SET,gfw," + proxyName,
     "RULE-SET,greatfire," + proxyName,
     "RULE-SET,proxy," + proxyName,
-	  "RULE-SET,google_ip,Google",
-	  "RULE-SET,telegram_ip,Telegram",
-	  "RULE-SET,twitter_ip,Twitter",
-	  "RULE-SET,cncidr,DIRECT",
-	  "GEOIP,CN,DIRECT,no-resolve",
+    "RULE-SET,google_ip,Google",
+    "RULE-SET,telegram_ip,Telegram",
+    "RULE-SET,twitter_ip,Twitter",
+    "RULE-SET,cncidr,DIRECT",
+    "GEOIP,CN,DIRECT,no-resolve",
     "MATCH,漏网之鱼",
   ];
   const ruleProviders = {
 	//手动添加规则
-	reject_rules: {
+    reject_rules: {
       type: "file",
       behavior: "classical",
       format: "text",
       path: "./ruleset/reject_rule.list",    
     },
-	proxy_rules: {
-      type: "file",
-      behavior: "classical",
-      format: "text",
-      path: "./ruleset/proxy_rule.list", 
-    },
-	direct_rules: {
+    direct_rules: {
       type: "file",
       behavior: "classical",
       format: "text",
       path: "./ruleset/direct_rule.list", 
     },
-
+    proxy_rules: {
+      type: "file",
+      behavior: "classical",
+      format: "text",
+      path: "./ruleset/proxy_rule.list", 
+    },
+    
     reject: {
       type: "http",
       behavior: "domain",
