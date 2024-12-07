@@ -1,3 +1,3 @@
 # 改写别人模版
 # Javascript
-[Murray_Online.js](https://raw.githubusercontent.com/Beaitroa/Mihomo-Party-Scripts/refs/heads/main/javascript/Murray_Online.js)
+[Murray_Online.js](https://github.com/Beaitroa/Mihomo-Party-Scripts/raw/refs/heads/main/Murray_Online.js)
