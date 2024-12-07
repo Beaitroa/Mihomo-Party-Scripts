@@ -20,11 +20,11 @@ function overwriteRules(params) {
     //"DOMAIN-SUFFIX,gstatic.com,自定义代理组1",
     // 示例3 ：使用 自定义代理组2
     //"DOMAIN-SUFFIX,googleapis.com,自定义代理组2",
-	"RULE-SET,reject_rules,REJECT-DROP",
-	"RULE-SET,direct_rules,DIRECT", 
+    "RULE-SET,reject_rules,REJECT-DROP",
+    "RULE-SET,direct_rules,DIRECT", 
     "RULE-SET,proxy_rules,GLOBAL",       
     "RULE-SET,BiliBili,哔哩哔哩",
-	"RULE-SET,YouTube,YouTube",
+    "RULE-SET,YouTube,YouTube",
   ];
 
 
@@ -36,42 +36,42 @@ function overwriteRules(params) {
     "RULE-SET,cn_domain,DIRECT",    
     "RULE-SET,applications,DIRECT",
     "RULE-SET,openai,ChatGPT",
-	"RULE-SET,Copilot,ChatGPT",
-	"RULE-SET,claude,Claude",
+    "RULE-SET,Copilot,ChatGPT",
+    "RULE-SET,claude,Claude",
     "RULE-SET,spotify,Spotify",
-	"RULE-SET,google_domain,Google",   
+    "RULE-SET,google_domain,Google",   
     "RULE-SET,telegram_domain,Telegram",        
     "RULE-SET,Microsoft,Microsoft",
     "RULE-SET,twitter_domain,Twitter",    
     "RULE-SET,bahamut_domain,巴哈姆特",
-	"RULE-SET,github,GitHub",
+    "RULE-SET,github,GitHub",
     "RULE-SET,tld-not-cn," + proxyName,    
     "RULE-SET,icloud," + proxyName,
     "RULE-SET,apple," + proxyName,
     "RULE-SET,gfw," + proxyName,
     "RULE-SET,greatfire," + proxyName,
     "RULE-SET,proxy," + proxyName,
-	"RULE-SET,google_ip,Google",
-	"RULE-SET,telegram_ip,Telegram",
-	"RULE-SET,twitter_ip,Twitter",
-	"RULE-SET,cn_ip,DIRECT",	
+    "RULE-SET,google_ip,Google",
+    "RULE-SET,telegram_ip,Telegram",
+    "RULE-SET,twitter_ip,Twitter",
+    "RULE-SET,cn_ip,DIRECT",	
     "MATCH,漏网之鱼",
   ];
   const ruleProviders = {
 	//手动添加规则
-	reject_rules: {
+    reject_rules: {
       type: "file",
       behavior: "classical",
       format: "text",
       path: "./ruleset/reject_rule.list",    
     },
-	direct_rules: {
+    direct_rules: {
       type: "file",
       behavior: "classical",
       format: "text",
       path: "./ruleset/direct_rule.list", 
     },
-	proxy_rules: {
+    proxy_rules: {
       type: "file",
       behavior: "classical",
       format: "text",
@@ -141,14 +141,14 @@ function overwriteRules(params) {
       path: "./ruleset/custom/openai.yaml",
       interval: 86400,
     },
-	Copilot: {
+    Copilot: {
       type: "http",
       behavior: "classical",
       url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml",
       path: "./ruleset/custom/Copilot.yaml",
       interval: 86400,
     },
-	claude: {
+    claude: {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
@@ -218,7 +218,7 @@ function overwriteRules(params) {
       path: "./ruleset/custom/telegram_ip.yaml",
       interval: 86400,
     },
-	github: {
+    github: {
       type: "http",
       behavior: "classical",
       url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml",
@@ -287,7 +287,7 @@ function overwriteProxyGroups(params) {
     { name: "SG-自动选择", regex: /新加坡|狮城|SG|Singapore|🇸🇬/ },
     { name: "JP-自动选择", regex: /日本|JP|Japan|🇯🇵/ },
     { name: "US-自动选择", regex: /美国|US|United States|America|🇺🇸/ },
-	{ name: "TW-自动选择", regex: /台湾|TW|Taiwan|Wan|🇨🇳|🇹🇼/ },
+    { name: "TW-自动选择", regex: /台湾|TW|Taiwan|Wan|🇨🇳|🇹🇼/ },
     { name: "其它-自动选择", regex: /^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|剩余|到期|主页|官网|游戏|关注|群组|重置)).*/i },
   ];
 
@@ -309,7 +309,7 @@ function overwriteProxyGroups(params) {
     { name: "SG-手工选择", regex: /新加坡|狮城|SG|Singapore|🇸🇬/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg" },
     { name: "JP-手工选择", regex: /日本|JP|Japan|🇯🇵/, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png" },
     { name: "US-手工选择", regex: /美国|US|United States|America|🇺🇸/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/us.svg" },
-	{ name: "TW-手工选择", regex: /台湾|TW|Taiwan|Wan|🇨🇳|🇹🇼/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg" },
+    { name: "TW-手工选择", regex: /台湾|TW|Taiwan|Wan|🇨🇳|🇹🇼/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg" },
     { name: "其它-手动选择", regex: /^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|剩余|到期|主页|官网|游戏|关注|群组|重置)).*/i, icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png" },
   ];
 
